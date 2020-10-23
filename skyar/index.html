@@ -48,8 +48,8 @@
       <div class="page-header">
         <h2 style="text-align: center;">Abstract and Method</h2>
       </div>
-      <div class="container well"> We propose a vision-based method for video
-        sky replacement and harmonization, which can automatically generate
+      <div class="row"> We propose a vision-based method for video sky
+        replacement and harmonization, which can automatically generate
         realistic and dramatic sky backgrounds in videos with controllable
         styles. Different from previous sky editing methods that either focus on
         static photos or require inertial measurement units integrated in
@@ -62,7 +62,10 @@
         conducted on videos diversely captured in the wild by handheld
         smartphones and dash cameras, and show high fidelity and good
         generalization of our method in both visual quality and lighting/motion
-        dynamics. </div>
+        dynamics.
+        <p><br>
+        </p>
+      </div>
       <div class="row">
         <div class="col-sm-12"> <img class="img-thumbnail" style="width:100%" src="overview.jpg">
         </div>
@@ -90,6 +93,16 @@
       <div class="page-header">
         <h2 id="Misc" style="text-align: center;">Video Sky Augmentation</h2>
       </div>
+      <div class="row"> Our method produces vivid blending results with a high
+        degree of realism and visual dynamics. With a single NVIDIA Titan XP GPU
+        card, our method reaches a real-time processing speed (24 fps) at the
+        output resolution of 640 x 320 and a near real-time processing speed (15
+        fps) at 854 x 480. The following gives a groups of our blending results
+        on outdoor videos (floating castle, fire cloud, super moon, and galaxy
+        night).<br>
+        <p><br>
+        </p>
+      </div>
       <div class="row">
         <div class="col-sm-12"> <img class="img-thumbnail" style="width:100%" src="demo-annarbor3-sunset4-cat%2000_00_00-00_00_05.gif">
           <p><br>
@@ -114,51 +127,64 @@
           </p>
         </div>
       </div>
-    </div>
-    <div class="container">
-      <div class="page-header">
-        <h2 id="Misc" style="text-align: center;">Weather/Lighting Translation</h2>
-      </div>
-      <div class="row">
-        <div class="col-sm-12">
-          <div style="text-align: center;"><img class="img-thumbnail" style="width:100%"
-              src="demo-ford1-sunny1-cat%2000_00_01-00_00_05%7E1.gif"><i><b>Cloudy
-                to sunny </b></i></div>
-          <p><br>
+      <div class="container">
+        <div class="page-header">
+          <h2 id="Misc" style="text-align: center;">Weather/Lighting Translation</h2>
+        </div>
+        <div class="row"> As a by-product, our method can be also used for image
+          weather and lighting translation. A potential application of our
+          method is data augmentation. Domain gap between datasets with limited
+          samples and the complex real-world poses great challenges for
+          data-driven computer vision methods. For example, domain sensitive
+          visual perception models in self-driving may face problems at night or
+          rainy days due to the limited examples in training data. We believe
+          our method has great potential for improving the generalization
+          ability of deep learning models in a variety of computer vision tasks
+          such as detection, segmentation, tracking, etc. This is one of our
+          future work.<br>
+          <p>&nbsp;<br>
           </p>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12">
-          <div style="text-align: center;"><img class="img-thumbnail" style="width:100%"
-              src="demo-ford3-rainy1-heavy-cat%2000_00_03-00_00_07.gif"><i><b>Sunny
-                to rainy </b></i></div>
-          <p><br>
-          </p>
+        <div class="row">
+          <div class="col-sm-12">
+            <div style="text-align: center;"><img class="img-thumbnail" style="width:100%"
+                src="demo-ford1-sunny1-cat%2000_00_01-00_00_05%7E1.gif"><i><b>Cloudy
+                  to sunny </b></i></div>
+            <p><br>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div style="text-align: center;"><img class="img-thumbnail" style="width:100%"
+                src="demo-ford3-rainy1-heavy-cat%2000_00_03-00_00_07.gif"><i><b>Sunny
+                  to rainy </b></i></div>
+            <p><br>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div style="text-align: center;"><img class="img-thumbnail" style="width:100%"
+                src="demo-LA1-thunderstorm1-cat%2000_00_02-00_00_08.gif"><i><b>Cloudy
+                  to thunderstorm </b></i></div>
+            <p><br>
+            </p>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-12">
-          <div style="text-align: center;"><img class="img-thumbnail" style="width:100%"
-              src="demo-LA1-thunderstorm1-cat%2000_00_02-00_00_08.gif"><i><b>Cloudy
-                to thunderstorm </b></i></div>
-          <p><br>
-          </p>
+      <div class="container">
+        <div class="page-header">
+          <h2 style="text-align: left;">Citation</h2>
         </div>
+        <div class="container well">@inproceedings{zou2020skyar,<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;title={Castle in the Sky: Dynamic Sky
+          Replacement and Harmonization in Videos},<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;author={Zhengxia Zou},<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;year={2020},<br>
+          &nbsp;&nbsp;&nbsp; journal={arXiv preprint arXiv:2010.11800},<br>
+          }</div>
       </div>
-    </div>
-    <div class="container">
-      <div class="page-header">
-        <h2 style="text-align: left;">Citation</h2>
-      </div>
-      <div class="container well">@inproceedings{zou2020skyar,<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;title={Castle in the Sky: Dynamic Sky
-        Replacement and Harmonization in Videos},<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;author={Zhengxia Zou},<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;year={2020},<br>
-        &nbsp;&nbsp;&nbsp; journal={arXiv preprint arXiv:2010.11800},<br>
-        }</div>
-    </div>
-    <b> </b>
+      <b> </b> </div>
   </body>
 </html>
