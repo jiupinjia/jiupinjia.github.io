@@ -1,0 +1,201 @@
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-168911195-1"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-168911195-1');
+</script> <title>SkyAR</title>
+    <title>Bootstrap Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+		</style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron bgimg">
+        <h1 style="text-align: center;">Stylized Neural Painting</h1>
+        <br>
+        <h4 style="text-align: center;"><a href="http://www-personal.umich.edu/%7Ezzhengxi/"
+            target="_blank">Zhengxia Zou</a>;&nbsp; <a href="https://www.shitianyang.tech/"
+            target="_blank">Tianyang Shi</a>;&nbsp; Shuang Qiu;&nbsp; <a href="https://yiyuan1991.github.io/"
+            target="_blank">Yi Yuan</a>;&nbsp; <a href="http://levir.buaa.edu.cn/"
+            target="_blank">Zhenwen Shi</a></h4>
+        <h4 style="text-align: center;">University of Michigan, Ann Arbor;&nbsp;
+          NetEase Fuxi AI Lab;&nbsp; Beihang University</h4>
+      </div>
+      <h5 style="text-align: center;"><img src="paper_logo.png" alt="" style="width: 40px; height: 40px;">
+        &nbsp; <a href="https://arxiv.org/abs/2010.11800" target="_blank">[Preprint]</a>
+        &nbsp; &nbsp; <img src="github_logo.png" alt="" style="width: 40px; height: 40px;">
+        &nbsp; <a href="https://github.com/jiupinjia/SkyAR" target="_blank">[Code]</a>
+        &nbsp; &nbsp; <img src="colab_logo.png" alt="" style="width: 40px; height: 40px;">
+        &nbsp; <a href="https://colab.research.google.com/drive/1-BqXD3EzDY6PHRdwb3cWayk2KictbFaz?usp=sharing"
+          target="_blank">[Colab]</a></h5>
+    </div>
+    <div class="container">
+      <div class="row">
+        <p><br>
+        </p>
+        <div class="col-sm-12"> <img class="img-thumbnail" style="width:100%" src="gif_teaser.gif">
+        </div>
+        <p><br>
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="page-header">
+        <h2 style="text-align: center;">Abstract and Method</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="container"> We propose a vision-based method for video sky
+        replacement and harmonization, which can automatically generate
+        realistic and dramatic sky backgrounds in videos with controllable
+        styles. Different from previous sky editing methods that either focus on
+        static photos or require inertial measurement units integrated in
+        smartphones on shooting videos, our method is purely vision-based,
+        without any requirements on the capturing devices, and can be well
+        applied to either online or offline processing scenarios. Our method
+        runs in real-time and is free of user interactions. We decompose this
+        artistic creation process into a couple of proxy tasks including sky
+        matting, motion estimation, and image blending. Experiments are
+        conducted on videos diversely captured in the wild by handheld
+        smartphones and dash cameras, and show high fidelity and good
+        generalization of our method in both visual quality and lighting/motion
+        dynamics.
+        <p><br>
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-sm-12"> <img class="img-thumbnail" style="width:100%" src="overview.jpg">
+        </div>
+        <p><br>
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="page-header">
+        <h2 id="me" style="text-align: center;">Overview Video</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="embed-responsive embed-responsive-16by9"> <iframe class="embed-responsive-item"
+              src="https://www.youtube.com/embed/zal9Ues0aOQ" allowfullscreen=""></iframe>
+          </div>
+        </div>
+      </div>
+      <p><br>
+      </p>
+    </div>
+    <div class="container">
+      <div class="page-header">
+        <h2 id="Misc" style="text-align: center;">Video Sky Augmentation</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="container"> Our method produces vivid blending results with a
+        high degree of realism and visual dynamics. With a single NVIDIA Titan
+        XP GPU card, our method reaches a real-time processing speed (24 fps) at
+        the output resolution of 640 x 320 and a near real-time processing speed
+        (15 fps) at 854 x 480. The following gives several groups of our
+        blending results on outdoor videos (floating castle, fire cloud, super
+        moon, and galaxy night).<br>
+        <p><br>
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-sm-12"> <img class="img-thumbnail" style="width:100%" src="demo-annarbor3-sunset4-cat%2000_00_00-00_00_05.gif">
+          <p><br>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12"> <img class="img-thumbnail" style="width:100%" src="demo-canyon4-sunset2-boarderreflect-cat%2000_00_00-00_00_30.gif">
+          <p><br>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12"> <img class="img-thumbnail" style="width:100%" src="demo-city1-night2-cat%2000_00_00-00_00_30.gif">
+          <p><br>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12"> <img class="img-thumbnail" style="width:100%" src="demo-canyon3-night1-cat%2000_00_04-00_00_11.gif">
+          <p><br>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="page-header">
+        <h2 id="Misc" style="text-align: center;">Weather/Lighting Translation</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="container"> As a by-product, our method can be also used for
+        image weather and lighting translation. A potential application of our
+        method is data augmentation. Domain gap between datasets with limited
+        samples and the complex real-world poses great challenges for
+        data-driven computer vision methods. For example, domain sensitive
+        visual perception models in self-driving may face problems at night or
+        rainy days due to the limited examples in training data. We believe our
+        method has great potential for improving the generalization ability of
+        deep learning models in a variety of computer vision tasks such as
+        detection, segmentation, tracking, etc. This is one of our future work.<br>
+        <p>&nbsp;<br>
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div style="text-align: center;"><img class="img-thumbnail" style="width:100%"
+              src="demo-ford1-sunny1-cat%2000_00_01-00_00_05%7E1.gif"><i><b>Cloudy
+                to sunny </b></i></div>
+          <p><br>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div style="text-align: center;"><img class="img-thumbnail" style="width:100%"
+              src="demo-ford3-rainy1-heavy-cat%2000_00_03-00_00_07.gif"><i><b>Sunny
+                to rainy </b></i></div>
+          <p><br>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div style="text-align: center;"><img class="img-thumbnail" style="width:100%"
+              src="demo-LA1-thunderstorm1-cat%2000_00_02-00_00_08.gif"><i><b>Cloudy
+                to thunderstorm </b></i></div>
+          <p><br>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="page-header">
+        <h2 style="text-align: left;">Citation</h2>
+      </div>
+      <div class="container well">@inproceedings{zou2020skyar,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;title={Castle in the Sky: Dynamic Sky
+        Replacement and Harmonization in Videos},<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;author={Zhengxia Zou},<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;year={2020},<br>
+        &nbsp;&nbsp;&nbsp; journal={arXiv preprint arXiv:2010.11800},<br>
+        }</div>
+    </div>
+    <b> </b>
+  </body>
+</html>
