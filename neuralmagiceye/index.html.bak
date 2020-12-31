@@ -1,0 +1,295 @@
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-168911195-1"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-168911195-1');
+</script> <title>Neural Magic Eye/title&gt; &lt;title&gt;Bootstrap Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+		</style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron bgimg">
+        <h4 style="    text-align: center;"><br>
+        </h4>
+        <h1 style="   text-align: center;">Neural Magic Eye</h1>
+        <h3 style="   text-align: center;">Learning to See and Understand the
+          Scene Behind an Autostereogram</h3>
+        <h4><br>
+        </h4>
+        <h4> </h4>
+        <h4 style="  text-align: center;"><a href="http://www-personal.umich.edu/%7Ezzhengxi/"
+            target="_blank">Zhengxia Zou</a> (1);&nbsp; <a href="https://www.shitianyang.tech/"
+            target="_blank">Tianyang Shi</a> (2);&nbsp; <a href="https://yiyuan1991.github.io/"
+            target="_blank">Yi Yuan</a> (2);&nbsp; <a href="http://levir.buaa.edu.cn/"
+            target="_blank">Zhenwei Shi</a> (3)</h4>
+        <h4> </h4>
+        <h4 style="  text-align: center;">(1) University of Michigan, Ann
+          Arbor;&nbsp; (2) NetEase Fuxi AI Lab;&nbsp; (3) Beihang University</h4>
+      </div>
+      <h5 style="text-align: center;"><img src="paper_logo.png" alt="" style="width: 40px; height: 40px;">
+        &nbsp; <a href="https://arxiv.org/abs/20xxxxxxxxxxxx" target="_blank">[Preprint]</a>
+        &nbsp; &nbsp; <img src="github_logo.png" alt="" style="width: 40px; height: 40px;">
+        &nbsp; <a href="https://github.com/jiupinjia/neural-magic-eye" target="_blank">[Code]</a>
+        &nbsp; &nbsp; <img src="colab_logo.png" alt="" style="width: 40px; height: 40px;">
+        &nbsp; <a href="https://colab.research.google.com/drive/xxxxxxxxxxxxxxxxxxxx?usp=sharing"
+          target="_blank">[Colab]</a></h5>
+    </div>
+    <div class="container">
+      <div class="row">
+        <p><br>
+        </p>
+        <div class="col-sm-12"> <img class="img-thumbnail" style="width:100%" src="gif_teaser_1.gif">
+        </div>
+        <p><br>
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="page-header">
+        <h2 style="text-align: center;">Abstract and Method</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="container"> An autostereogram, a.k.a. magic eye image, is a
+        single-image stereogram that can create visual illusions of 3D scenes
+        from 2D textures. This paper studies an interesting question that
+        whether a deep CNN can be trained to recover the depth behind an
+        autostereogram and understand its content. The key to the autostereogram
+        magic lies in the stereopsis - to solve such a problem, a model has to
+        learn to discover and estimate disparity from the quasi-periodic
+        textures. We show that deep CNNs embedded with disparity convolution, a
+        novel convolutional layer proposed in this paper that simulates
+        stereopsis and encodes disparity, can nicely solve such a problem after
+        being sufficiently trained on a large 3D object dataset in a
+        self-supervised fashion. We refer to our method as&nbsp;
+        "NeuralMagicEye". Experiments show that our method can accurately
+        recover the depth behind autostereograms with rich details and gradient
+        smoothness. Experiments also show the completely different working
+        mechanisms for autostereogram perception between neural networks and
+        human eyes. We hope this research can help people with visual
+        impairments and those who have trouble viewing autostereograms.
+        <p><br>
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-sm-12"> <img class="img-thumbnail" style="width:100%" src="overview.jpg">
+        </div>
+        <p><br>
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="page-header">
+        <h2 id="me" style="text-align: center;">One-minute Video Demo</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="embed-responsive embed-responsive-16by9"> <iframe class="embed-responsive-item"
+              src="https://www.youtube.com/embed/Fkh7DEblqJ8" allowfullscreen=""></iframe>
+          </div>
+        </div>
+      </div>
+      <p><br>
+      </p>
+    </div>
+    <div class="container">
+      <div class="page-header">
+        <h2 id="Misc" style="text-align: center;">Autostereogram Decoding
+          Results</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="container"> The the following, we show some online
+        autostereograms and their decoding results by using our method. The
+        autostereograms are generated by different authors with different
+        graphic engines. For more information about how to correctly view an
+        autostereogram, please check out the instructions on this <a href="https://en.wikipedia.org/wiki/Autostereogram"
+          target="_top">Wikipedia page</a>.<br>
+        <p><br>
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-sm-12"> <img class="img-thumbnail" style="width:100%" src="rst.jpg">
+          <p><br>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="page-header">
+        <h2 id="Misc" style="text-align: center;">Animated Results</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="container"> When a series of autostereograms are shown frame
+        by frame, in the same way moving pictures are shown, human brain will
+        perceive an animated 3D scene behind the autostereogram. Our method can
+        be also apply to decoding animated inputs. The following shows some of
+        our results.<br>
+        <p>&nbsp;<br>
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div style="text-align: center;"><img class="img-thumbnail" style="width:100%"
+              src="demo_animated_bunny.gif"></div>
+          <p><br>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div style="text-align: center;"><img class="img-thumbnail" style="width:100%"
+              src="demo_animated_jet.gif"></div>
+          <p><br>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div style="text-align: center;"><img class="img-thumbnail" style="width:100%"
+              src="demo_animated_car.gif"></div>
+          <p><br>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div style="text-align: center;"><img class="img-thumbnail" style="width:100%"
+              src="demo_animated_armadillo.gif"></div>
+          <p><br>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="page-header">
+        <h2 id="Misc" style="text-align: center;">Autostereogram Digital
+          Watermarking</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="container"> One potential application of our method is digital
+        image watermarking. In the following example, we investigate whether our
+        model is capable of recovering depth from a carrier image in which the
+        autostereogram is embedded as hidden watermarks. We first generate a set
+        of autostereograms based on random characters and QR-codes. The pixel
+        values in the character images and QR-codes are recorded as the depth
+        value in the autostereograms. We then train our decoder on a set of
+        superimposed images. These images are generated as a linear combination
+        of background carriers and those autostereograms. Scan the recovered
+        QR-code in the following image with your smartphone and check out what
+        secret is hidden inside.<br>
+        <p><br>
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-sm-12"> <img class="img-thumbnail" style="width:100%" src="watermarking.jpg">
+          <p><br>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="page-header">
+        <h2 id="Misc" style="text-align: center;">Autostereogram Retrieval</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="container"> Our method can be also applied to autostereogram
+        retrieval. To complete such a task, the model has to learn to understand
+        the semantics behind the autostereograms. We, therefore, build an
+        autostereogram recognition network by replacing the upsampling
+        convolution layers in our decoding network with a fully connected layer
+        to predict the class probability of the input. Given a query image, we
+        iterate through all the autostereograms in the database (our testing
+        set) and select the top-k matching results based on the feature distance
+        between the query and the matching images. In the following we show the
+        query image and the top-k retrieval results. We can see although the
+        matching autostereograms have very different texture appearance, they
+        share the same semantics in their depth.<br>
+        <p><br>
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-sm-12"> <img class="img-thumbnail" style="width:100%" src="retrieval.jpg">
+          <p><br>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="page-header">
+        <h2 id="Misc" style="text-align: center;">Neural Autostereograms</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="container"> We finally investigated an interesting question
+        that given a depth image, what an "optimal autostereogram" should look
+        like in the eyes of a decoding network. The study of this question may
+        help us understand the working mechanism of neural networks for
+        autostereogram perception. To generate the "optimal autostereogram", we
+        run gradient descent on the input end of our decoding network and
+        minimize the difference between its output and the reference depth
+        image. In the following example, (a) shows the generated "optimal
+        autostereogram" on our unet decoding network. We named it a "neural
+        autostereogram". In (b)-(c), we show the reference depth and the
+        decoding output. <br>
+        <br>
+        An interesting thing we observed during this experiment is that,
+        although the decoding output of the network is already very similar to
+        the target depth image, however, human eyes still cannot perceive the
+        depth hidden in this neural autostereogram. Also, there are no clear
+        periodic patterns in this image, which is very different from those
+        autostereograms generated by using graphic engines. More surprisingly,
+        when we feed this neural autostereogram to other decoding networks with
+        very different architectures, we found that these networks can
+        miraculously perceive the depth correctly. To confirm that it is not
+        accidental, we also tried different image initialization and smooth
+        constraints but still have similar observations. In the following image,
+        (d)-(f) show the decoding results on this image by using other different
+        decoding networks. This experiment suggests that neural networks and the
+        human eye may use completely different ways for stereogram perception.
+        The mechanism and properties behind the neural autostereograms are still
+        open questions and need further study. <br>
+        <p><br>
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-sm-12"> <img class="img-thumbnail" style="width:100%" src="neuralautostereogram.jpg">
+          <p><br>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="page-header">
+        <h2 style="text-align: left;">Citation</h2>
+      </div>
+      <div class="container well">@inproceedings{zou2020stylized,<br>
+        &nbsp;&nbsp;&nbsp; title={NeuralMagicEye: Learning to See and Understand
+        the Scene Behind an Autostereogram}, <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; author={Zhengxia Zou and Tianyang Shi and
+        Yi Yuan and Zhenwei Shi},<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; year={2020xxx},<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; eprint={20xxxxx.xxxxx},<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; archivePrefix={arXiv},<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; primaryClass={cs.CV}<br>
+        }</div>
+    </div>
+    <b> </b>
+  </body>
+</html>
