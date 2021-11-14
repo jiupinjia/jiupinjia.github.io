@@ -1,0 +1,240 @@
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-168911195-1"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-168911195-1');
+</script> <title>Neural Magic Eye</title>
+    <title>Bootstrap Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+		</style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron bgimg">
+        <h4 style="    text-align: center;"><br>
+        </h4>
+        <div style="text-align: center;">
+          <h1>Rocket-recycling with Reinforcement Learning</h1>
+        </div>
+        <h4><br>
+        </h4>
+        <h4> </h4>
+        <h4 style="  text-align: center;"><a href="http://www-personal.umich.edu/%7Ezzhengxi/"
+            target="_blank">Zhengxia Zou, Ph.D.<br>
+          </a></h4>
+        <h4> </h4>
+        <h4 style="  text-align: center;">University of Michigan, Ann Arbor</h4>
+      </div>
+    </div>
+    <div class="container">
+      <div class="page-header">
+        <h2 style="text-align: center;">About This Project</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="container"> <span style="color: rgb(26, 26, 27); font-family: &quot;Noto Sans&quot;, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgba(255, 255, 255, 0.8); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">As
+          a big fan of SpaceX, I always dreamed of having my own rockets.
+          Recently, I worked on an interesting question that whether we can
+          "build" a virtual rocket and address a challenging problem - rocket
+          recycling, with simple reinforcement learning</span>. I tried on two
+        tasks: hovering and landing. Since it is my first reinforcement learning
+        project, I tried to implement everything from scratch as much as
+        possible, including the environment, rocket dynamics and the RL agent. I
+        hope that through these low-level coding, I can have a deeper
+        understanding of the of reinforcement learning, including the basic
+        algorithms, the interaction between the agent and the environment, and
+        the design of rewards. </div>
+      <div class="container">The code is available at <a href="https://github.com/jiupinjia/rocket-recycling"
+          target="_blank">https://github.com/jiupinjia/rocket-recycling</a>.
+        Hope you like it!</div>
+      <div class="container"><br>
+      </div>
+    </div>
+    <div class="container">
+      <div class="page-header">
+        <h2 id="me" style="text-align: center;">One-minute Video Demo</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="embed-responsive embed-responsive-16by9"> <iframe class="embed-responsive-item"
+              src="https://www.youtube.com/embed/gsIiniJMr3E" allowfullscreen=""></iframe>
+          </div>
+        </div>
+      </div>
+      <p><br>
+      </p>
+    </div>
+    <div class="container">
+      <div class="page-header">
+        <h2 id="Misc" style="text-align: center;">Agent and Environment</h2>
+      </div>
+    </div>
+    <div class="container">The rocket is simplified into a rigid body on a 2D
+      plane. I considered the basic cylinder dynamics model and assumed the air
+      resistance is proportional to the velocity. A thrust-vectoring engine is
+      installed at the bottom of the rocket. This engine provides adjustable
+      thrust values (0.2g, 1.0g, and 2.0g) with different directions. An angular
+      velocity constraint is added to the nozzle with a max-rotating speed of 30
+      degrees/second. With the above basic settings, the action space is defined
+      as a collection of the discrete control signals of the engine, including
+      the thrust acceleration and the angular velocity of the nozzle. The
+      state-space consists of the rocket position, speed, angle, angle velocity,
+      nozzle angle, and the simulation time. </div>
+    <div class="container"><br>
+    </div>
+    <div class="container"><img class="img-thumbnail" style="width:100%" src="config.jpg"></div>
+    <div class="container"><br>
+    </div>
+    <div class="container">For the landing task, I followed the basic parameters
+      of the Starship SN10 belly flop maneuver. The initial speed is set to
+      -50m/s. The rocket orientation is set to 90 degrees (horizontally). The
+      landing burn height is set to 500 meters above the ground. For the
+      hovering task, the rocket is released at a height of 300 meters with a
+      vertical speed of -10m/s and a orientation of 45~135 degrees (-45~+45
+      degrees vertically). </div>
+    <div class="container"><br>
+    </div>
+    <div class="container"><img class="img-thumbnail" style="width:100%" src="timelapse.jpg"></div>
+    <div class="container"><br>
+    </div>
+    <div class="container">Image credit <a href="https://twitter.com/thejackbeyer/status/1367364251233497095"
+        target="_blank">https://twitter.com/thejackbeyer/status/1367364251233497095</a><br>
+      <br>
+      The reward functions are quite straightforward.<br>
+      <br>
+      For the hovering tasks: the step-reward is given based on two rules: 1)
+      The distance between the rocket and the predefined target point - the
+      closer they are, the larger reward will be assigned. 2) The angle of the
+      rocket body (the rocket should stay as upright as possible)<br>
+      <br>
+      For the landing task: we look at the Speed and angle at the moment of
+      contact with the ground - when the touching-speed are smaller than a safe
+      threshold and the angle is close to 0 degrees (upright), we see it as a
+      successful landing and a big reward will be assigned. The rest of the
+      rules are the same as the hovering task.</div>
+    <div class="container">
+      <div class="page-header">
+        <h2 id="Misc" style="text-align: center;" class="container">Results</h2>
+      </div>
+    </div>
+    <div class="container">I implemented the above environment and train a
+      policy-based agent (actor-critic) to solve this problem. The episode
+      reward finally converges very well after over 20000 training episodes. The
+      following GIFs show the learned RL behavior over number of training
+      episodes.</div>
+    <div class="container"><br>
+      <div class="row">
+        <div class="col-sm-6"> <img class="img-thumbnail" style="width:100%" src="hovering_rewards_00022301.jpg">
+          <p></p>
+          <p style="text-align: center;"> Reward over number of training
+            episodes (hovering task)</p>
+          <p></p>
+        </div>
+        <div class="col-sm-6"><img class="img-thumbnail" style="width:100%" src="landing_rewards_00011201.jpg">
+          <p></p>
+          <p style="text-align: center;"> Reward over number of training
+            episodes (landing task)</p>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <div class="container"><br>
+    </div>
+    <div class="container"><br>
+      <div class="row">
+        <div class="col-sm-6"> <img class="img-thumbnail" style="width:100%" src="h_0.gif">
+          <p></p>
+          <p style="text-align: center;"> Training episode 0 (random agent) </p>
+          <p></p>
+        </div>
+        <div class="col-sm-6"><img class="img-thumbnail" style="width:100%" src="h_1k.gif">
+          <p></p>
+          <p style="text-align: center;">Training episode 1000 </p>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <div class="container"><br>
+    </div>
+    <div class="container"><br>
+      <div class="row">
+        <div class="col-sm-6"> <img class="img-thumbnail" style="width:100%" src="h_2k.gif">
+          <p></p>
+          <p style="text-align: center;"> Training episode 2000</p>
+          <p></p>
+        </div>
+        <div class="col-sm-6"><img class="img-thumbnail" style="width:100%" src="h_10k.gif">
+          <p></p>
+          <p style="text-align: center;"> Training episode 10000</p>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <div class="container"><br>
+    </div>
+    <br>
+    <div class="container">Finally, after 20000 training episodes</div>
+    <div class="container"><br>
+      <div class="row">
+        <div class="col-sm-6"> <img class="img-thumbnail" style="width:100%" src="h_20k.gif">
+          <p></p>
+          <p style="text-align: center;"> Fully trained agent (task: hovering) </p>
+          <p></p>
+        </div>
+        <div class="col-sm-6"><img class="img-thumbnail" style="width:100%" src="l_11k.gif">
+          <p></p>
+          <p style="text-align: center;">Fully trained agent (task: landing) </p>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="page-header">
+        <h2 id="Misc" style="text-align: center;">Comparison with SN10 Landing
+          Maneuver</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="container"> Despite the simple setting of the environment and
+        the reward, the agent has learned the belly flop maneuver nicely. The
+        following animation shows a comparison between the real SN10 and a fake
+        one learned from reinforcement learning.</div>
+      <div class="container"><br>
+      </div>
+      <div class="container"><img class="img-thumbnail" style="width:100%" src="gif_teaser.gif">
+        <p></p>
+      </div>
+    </div>
+    <br>
+    <p><br>
+    </p>
+    <div class="container">
+      <div class="page-header">
+        <h2 style="text-align: left;">Citation</h2>
+      </div>
+      <div class="container well">@misc{zou2021rocket,<br>
+        &nbsp; author = {Zhengxia Zou},<br>
+        &nbsp; title = {Rocket-recycling with Reinforcement Learning},<br>
+        &nbsp; year = {2021},<br>
+        &nbsp; publisher = {GitHub},<br>
+        &nbsp; journal = {GitHub repository},<br>
+        &nbsp; howpublished =
+        {\url{https://github.com/jiupinjia/rocket-recycling}}<br>
+        }</div>
+    </div>
+    <b> </b>
+  </body>
+</html>
