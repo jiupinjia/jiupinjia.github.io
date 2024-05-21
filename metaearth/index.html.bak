@@ -1,0 +1,171 @@
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-168911195-1"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-168911195-1');
+</script> <title>SkyAR</title>
+    <title>Bootstrap Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+		</style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron bgimg">
+        <h1 style="text-align: center;">Castle in the Sky</h1>
+        <h2 style="text-align: center;">Dynamic Sky Replacement and
+          Harmonization in Videos</h2>
+        <br>
+        <h4 style="text-align: center;"><a href="http://www-personal.umich.edu/%7Ezzhengxi/"
+
+            target="_blank">Zhengxia Zou</a></h4>
+        <h4 style="text-align: center;">University of Michigan, Ann Arbor</h4>
+      </div>
+      <h4 style="text-align: center;"><img src="paper_logo.png" alt="" style="width: 50px; height: 50px;">
+        &nbsp; <a href="preprint" target="_blank">[Paper]</a>&nbsp; &nbsp;
+        &nbsp; &nbsp; <img src="github_logo.png" alt="" style="width: 40px; height: 40px;">
+        &nbsp; <a href="https://github.com/jiupinjia/SkyAR" target="_blank">[Code]</a>
+        &nbsp; &nbsp; &nbsp; &nbsp; <img src="database_logo.svg" alt="" style="width: 40px; height: 40px;">
+        &nbsp; <a href="Github" target="_blank">[Data]</a></h4>
+    </div>
+    <div class="container">
+      <div class="row">
+        <p><br>
+        </p>
+        <div class="col-sm-12"> <img class="img-thumbnail" style="width:100%" src="gif_teaser.gif">
+        </div>
+        <p><br>
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="page-header">
+        <h2 style="text-align: center;">Abstract and Method</h2>
+      </div>
+      <div class="container well"> We propose a vision-based method for video
+        sky replacement and harmonization, which can automatically generate
+        realistic and dramatic sky backgrounds in videos with controllable
+        styles. Different from previous sky editing methods that either focus on
+        static photos or require inertial measurement units integrated in
+        smartphones on shooting videos, our method is purely vision-based,
+        without any requirements on the capturing devices, and can be well
+        applied to either online or offline processing scenarios. Our method
+        runs in real-time and is free of user interactions. We decompose this
+        artistic creation process into a couple of proxy tasks including sky
+        matting, motion estimation, and image blending. Experiments are
+        conducted on videos diversely captured in the wild by handheld
+        smartphones and dash cameras, and show high fidelity and good
+        generalization of our method in both visual quality and lighting/motion
+        dynamics. </div>
+      <div class="row">
+        <div class="col-sm-12"> <img class="img-thumbnail" style="width:100%" src="overview.jpg">
+        </div>
+        <p><br>
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="page-header">
+        <h2 id="me" style="text-align: center;">Overview Video</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="embed-responsive embed-responsive-16by9"> <iframe class="embed-responsive-item"
+
+              src="https://www.youtube.com/embed/zal9Ues0aOQ" allowfullscreen=""></iframe>
+          </div>
+        </div>
+      </div>
+      <p><br>
+      </p>
+    </div>
+    <div class="container">
+      <div class="page-header">
+        <h2 id="Misc" style="text-align: center;">Video Sky Augmentation</h2>
+      </div>
+      <div class="row">
+        <div class="col-sm-12"> <img class="img-thumbnail" style="width:100%" src="demo-annarbor3-sunset4-cat%2000_00_00-00_00_05.gif">
+          <p><br>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12"> <img class="img-thumbnail" style="width:100%" src="demo-canyon4-sunset2-boarderreflect-cat%2000_00_00-00_00_30.gif">
+          <p><br>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12"> <img class="img-thumbnail" style="width:100%" src="demo-city1-night2-cat%2000_00_00-00_00_30.gif">
+          <p><br>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12"> <img class="img-thumbnail" style="width:100%" src="demo-canyon3-night1-cat%2000_00_04-00_00_11.gif">
+          <p><br>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="page-header">
+        <h2 id="Misc" style="text-align: center;">Weather/Lighting Translation</h2>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div style="text-align: center;"><img class="img-thumbnail" style="width:100%"
+
+              src="demo-ford1-sunny1-cat%2000_00_01-00_00_05%7E1.gif"><i><b>Cloudy
+                to sunny </b></i></div>
+          <p><br>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div style="text-align: center;"><img class="img-thumbnail" style="width:100%"
+
+              src="demo-ford3-rainy1-heavy-cat%2000_00_03-00_00_07.gif"><i><b>Sunny
+                to rainy </b></i></div>
+          <p><br>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div style="text-align: center;"><img class="img-thumbnail" style="width:100%"
+
+              src="demo-LA1-thunderstorm1-cat%2000_00_02-00_00_08.gif"><i><b>Cloudy
+                to thunderstorm </b></i></div>
+          <p><br>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="page-header">
+        <h2 style="text-align: left;">Citation</h2>
+      </div>
+      <div class="container well">@inproceedings{zou2020skyar,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;title={Castle in the Sky: Dynamic Sky
+        Replacement and Harmonization in Videos},<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;author={Zhengxia Zou},<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;year={2020},<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;booktitle={arXiv:/xxxxxxxx},<br>
+        }</div>
+    </div>
+    <b> </b>
+  </body>
+</html>

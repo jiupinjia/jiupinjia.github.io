@@ -1,0 +1,226 @@
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-168911195-1"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-168911195-1');
+</script> <title>MetaEarth</title>
+    <title>Bootstrap Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+		</style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron bgimg">
+        <h1 style="text-align: center;">MetaEarth</h1>
+        <h2 style="text-align: center;">A Generative Foundation Model for Global-Scale Remote Sensing Image Generation</h2>
+        <br>
+        <h4 style="text-align: center;">Zhiping Yu, Chenyang Liu, Liqin Liu, <a href="https://zhengxiazou.github.io/"
+            target="_blank">Zhenwei Shi</a>, <a href="https://zhengxiazou.github.io/"
+            target="_blank">Zhengxia Zou*</a></h4>
+        <h4 style="text-align: center;">Beihang University</h4>
+        <h5 style="text-align: center;">*Correspndence: zhengxiazou@buaa.edu.cn</h5>
+      </div>
+      <h5 style="text-align: center;"><img src="paper_logo.png" alt="" style="width: 40px; height: 40px;">
+        &nbsp; <a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank">[Preprint]</a>
+        &nbsp; &nbsp; <img src="github_logo.png" alt="" style="width: 40px; height: 40px;">
+        &nbsp; <a href="https://github.com/xxxxx/MetaEarth" target="_blank">[Code]</a>
+      </h5>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12"> <img class="img-thumbnail" style="width:100%" src="gif_global.gif">
+        </div>
+        <p><br>
+        </p>
+      </div>
+    </div>
+
+
+
+    <div class="container">
+      <div class="page-header">
+        <h2 style="text-align: center;">Abstract</h2>
+      </div>
+      <div class="container">The recent advancement of generative foundational
+        models has ushered in a new era of image generation in the realm of natural images,
+        revolutionizing art design, entertainment, environment simulation, and beyond.
+        Despite producing high-quality samples, existing methods are constrained to generating images
+        of scenes at a limited scale. In this paper, we present MetaEarth - a generative foundation model
+        that breaks the barrier by scaling image generation to a global level, exploring the creation of
+        worldwide, multi-resolution, unbounded, and virtually limitless remote sensing images.
+        In MetaEarth, we propose a resolution-guided self-cascading generative framework,
+        which enables the generating of images at any region with a wide range of geographical resolutions.
+        To achieve unbounded and arbitrary-sized image generation, we design a novel noise sampling strategy
+        for denoising diffusion models by analyzing the generation conditions and initial noise.
+        To train MetaEarth, we construct a large dataset comprising multi-resolution optical remote sensing
+        images with geographical information. Experiments have demonstrated the powerful capabilities of
+        our method in generating global-scale images. Additionally, the MetaEarth serves as a data engine
+        that can provide high-quality and rich training data for downstream tasks. Our model opens up
+        new possibilities for constructing generative world models by simulating Earth’s visuals from
+        an innovative overhead perspective.
+      </div>
+      <p><br>
+          </p>
+      <div class="row">
+        <div class="col-sm-12"><img class="img-thumbnail" style="width:100%" src=teaser.jpg>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="page-header">
+        <h2 id="multirs" style="text-align: center;">Method Overview</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="container"> We constructed a world-scale remote sensing generative foundation model
+        with over 600 million parameters based on the denoising diffusion paradigm. We propose a
+        resolution-guided, self-cascading framework capable of
+        generating scenes and resolutions for any global region. The generation process unfolds in
+        multiple stages, starting with low-resolution images and advancing to high-resolution images.
+        In each stage, the generation is conditioned on the low-resolution images and their associated
+        spatial resolutions generated in the preceding stage.
+      </div>
+      <p><br>
+          </p>
+      <div class="row">
+        <div class="col-sm-12"><img class="img-thumbnail" style="width:100%" src=method_overview.jpg>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="page-header">
+        <h2 id="worldwide" style="text-align: center;">Global-scale Image Generation</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="container">Our MetaEarth can generate a variety of remote sensing scenes worldwide,
+        including glaciers, snowfields, deserts, forests, beaches, farmlands,
+        industrial areas, residential areas, etc.
+        <p><br>
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-sm-12"><img class="img-thumbnail" style="width:100%" src=world_gallary.jpg>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="page-header">
+        <h2 id="Unbounded" style="text-align: center;">Unbounded and Arbitrary-Sized Image Generation</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="container">To achieve the generation of large-scale remote sensing images
+        of arbitrary sizes, we propose an unbounded image generation method including
+        a memory-efficient sliding window generation pipeline and a noise sampling strategy.
+        Our proposed unbounded method can greatly alleviate visual discontinuities caused by
+        image block stitching, thereby achieving boundless and arbitrary-sized image
+        generation.
+        <p><br>
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6"><img class="img-thumbnail" style="width:100%" src=gif_flyingcam1.gif>
+        </div>
+        <div class="col-sm-6"><img class="img-thumbnail" style="width:100%" src=gif_flyingcam2.gif>
+        </div>
+      </div>
+      <br>
+      <div class="container">Here are some examples of high-resolution large-scale images
+        generated by our model (click to view the original sized images).
+        <p><br>
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-sm-4"><a href="desert.jpg" target="_blank"><img class="img-thumbnail" style="width:100%" src=desert.jpg></a>
+        </div>
+        <div class="col-sm-4"><a href="mountain.jpg" target="_blank"><img class="img-thumbnail" style="width:100%" src=mountain.jpg></a>
+        </div>
+        <div class="col-sm-4"><a href="city.jpg" target="_blank"><img class="img-thumbnail" style="width:100%" src=city.jpg></a>
+        </div>
+      </div>
+
+
+    <div class="container">
+      <div class="page-header">
+        <h2 id="Unseen" style="text-align: center;">Multi-resolution Image Generation</h2>
+      </div>
+    </div>
+     <div class="container">
+      <div class="container">The self-cascading generation framework in our method enables the model to generate
+        images with spatial resolution diversity.
+        <p><br>
+        </p>
+      </div>
+       <div class="row">
+        <div class="col-sm-6"><img class="img-thumbnail" style="width:100%" src=gif_zoomin1.gif>
+        </div>
+        <div class="col-sm-6"><img class="img-thumbnail" style="width:100%" src=gif_zoomin2.gif>
+        </div>
+        <p><br>
+        </p>
+      </div>
+     </div>
+
+
+
+
+    <div class="container">
+      <div class="page-header">
+        <h2 id="Unseen" style="text-align: center;">Generalization to Unseen Conditions</h2>
+      </div>
+    </div>
+     <div class="container">
+      <div class="container">Thanks to being trained on large-scale data, our MetaEarth possesses
+        strong generalization capabilities and performs well even on unseen scenes. We create a
+        "parallel world" and use a low-resolution map of "Pandora Planet" (generated by GPT4-V) as the initial
+        condition for out model and then generated higher-resolution images sequentially. Despite our
+        training data not covering such scenes, MetaEarth is still able to generate images with reasonable
+        land cover distribution and realistic details.
+        <p><br>
+        </p>
+      </div>
+       <div class="row">
+        <div class="col-sm-12"><img class="img-thumbnail" style="width:100%" src=exp_pandora.jpg>
+        </div>
+        <p><br>
+        </p>
+      </div>
+     </div>
+
+
+    </div>
+    <div class="container">
+      <div class="page-header">
+        <h2 style="text-align: left;">Citation</h2>
+      </div>
+      <div class="container well">@inproceedings{yu2024metaearth,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;title={MetaEarth: A Generative Foundation Model for Global-Scale Remote
+        Sensing Image Generation},<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;author={Zhiping Yu, Chenyang Liu, Liqin Liu, Zhenwei Shi, Zhengxia Zou},<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;year={2024},<br>
+        &nbsp;&nbsp;&nbsp; journal={arXiv preprint arXiv:xxxx.xxxxx},<br>
+        }</div>
+    </div>
+    <b> </b>
+  </body>
+</html>
